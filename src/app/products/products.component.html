@@ -1,0 +1,36 @@
+
+<div></div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            
+    <input  type="number"   [(ngModel)]="searchTermnn"  />
+</div>
+<br><br>
+    <div class="card shadow mb-4">
+        <div class="card-body">
+            <table class="table table-striped">
+               <tr>
+                        <th>id</th>
+                        <th>title</th>
+                        <th>price</th>
+                        <th>quantity</th>
+                        <th>like</th>
+                        <th colspan="3">Actions</th>
+                    </tr>
+              
+                <tbody *ngFor="let p of products">
+                    <tr *ngIf="p.price<searchTermnn">
+                        <td>{{p.id}}</td>
+                        <td>{{p.title}}</td>
+                        <td>{{p.price}}</td>
+                        <td>{{p.quantity}}</td>
+                        <td>{{p.like}}</td>
+                        <td rowspan="2" ><button type="submit" class="btn btn-success" [disabled]="p.quantity == 0"(click)="ajouter(p)">Buy</button><button type="submit" class="btn btn-danger"  (click)="like(p)">Like</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -88,7 +88,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.css"
+
             ],
             "scripts": []
           }
@@ -119,6 +121,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "projet3"
+    }
+  },
+  "defaultProject": "projet3",
+  "cli": {
+    "analytics": "c586454b-167b-4ca4-80e7-b47f8ef3b212"
+  }
 }
